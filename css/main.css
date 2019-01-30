@@ -2322,15 +2322,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .p1-gradient-bg, .banner-left .primary-btn, .home-about-right .primary-btn, .facts-area, .thumb .overlay-bg, .price-area .single-price:hover, .brands-area, .about-banner, .sb_bar {
-  background: -moz-linear-gradient(0deg, #a5dc84 0%, #a5dc84 100%);
-  background: -webkit-linear-gradient(0deg, #a5dc84 0%, #a5dc84 100%);
-  background: -ms-linear-gradient(0deg, #a5dc84 0%, #a5dc84 100%);
+  background: -moz-linear-gradient(0deg, #73bf45 0%, #73bf45 100%);
+  background: -webkit-linear-gradient(0deg, #73bf45 0%, #73bf45 100%);
+  background: -ms-linear-gradient(0deg, #73bf45 0%, #73bf45 100%);
 }
 
 .p1-gradient-color, .single-services:hover .lnr {
-  background: -moz-linear-gradient(0deg, #a5dc84 0%, #a5dc84 100%);
-  background: -webkit-linear-gradient(0deg, #a5dc84 0%, #a5dc84 100%);
-  background: -ms-linear-gradient(0deg, #a5dc84 0%, #a5dc84 100%);
+  background: -moz-linear-gradient(0deg, #73bf45 0%, #73bf45 100%);
+  background: -webkit-linear-gradient(0deg, #73bf45 0%, #73bf45 100%);
+  background: -ms-linear-gradient(0deg, #73bf45 0%, #73bf45 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -4484,7 +4484,8 @@ dl.accordion.time-line:before {
 }
 
 .nutripharmaFont{
-  font-family: Berthold-Akzidenz-Grotesk, serif;
+  /*font-family: Berthold-Akzidenz-Grotesk, serif;*/
+  font-family: Helvetica, serif;
 }
 
 /*-------- end footer Area -------------*/

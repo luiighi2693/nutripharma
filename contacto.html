@@ -35,11 +35,11 @@
 				<div class="row align-items-center justify-content-between d-flex">
 					<div id="logo" style="    margin-left: 3%;">
 						<a href="#"><img src="img/nutripharma/logo_nutripharma.png" alt="" title=""
-										 style="    width: 160px;height: 100px;" /></a>
+										 style="    width: 140px;height: 100px;" /></a>
 					</div>
 					<nav id="nav-menu-container" style="margin-right: 3%;">
 						<ul class="nav-menu">
-							<li><a href="home.html">INICIO</a></li>
+							<li><a href="index.html">INICIO</a></li>
 							<li><a href="productos.html">PRODUCTOS</a></li>
 							<li><a href="servicios.html">SERVICIOS</a></li>
 							<li><a href="contacto.html">CONTACTO</a></li>
@@ -59,8 +59,8 @@
 
 				  <div class="row justify-content-between" style="color: black;">
 					  <div class="col-lg-4 col-md-4 home-about-left">
-						  <div class="thumb pt-30">
-							  <img class="image img-fluid" src="img/nutripharma/demoMap.png" alt="">
+						  <div style="width:40%; line-height: 1;     padding: 0 2% 2% 2%;">
+							  <div id="map"></div>
 						  </div>
 
 						  <p class="pt-15" style="    font-size: 1rem;line-height: 1.2rem;">
@@ -204,6 +204,22 @@
 			<script src="js/simple-skillbar.js"></script>							
 			<script src="js/owl.carousel.min.js"></script>							
 			<script src="js/mail-script.js"></script>	
-			<script src="js/main.js"></script>	
+			<script src="js/main.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjoJ0lPh6pB2kkKJYGxckWA0-kQX_Q_4w=initMap"
+				type="text/javascript"></script>
+
+		<script>
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: {lat: -34.397, lng: 150.644},
+					zoom: 8
+				});
+			}
+
+			$(document).ready(function(e) {
+				initMap();
+			});
+
+		</script>
 		</body>
 	</html>
