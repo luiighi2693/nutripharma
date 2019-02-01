@@ -4502,3 +4502,18 @@ dl.accordion.time-line:before {
   min-height: 70px;
   margin-top: 30px;
 }
+
+@media (max-width: 430px) {
+  .nutripharmaFontProduct{
+    font-size: 1rem !important;
+  }
+  .nutripharmaFontProductTittle{
+    font-size: 1.4rem !important;
+  }
+  .nutripharmaFontProductSubTittle{
+    font-size: 1.4rem !important;
+  }
+  .nutripharmaFontProductContent{
+    font-size: 1rem !important;
+  }
+}

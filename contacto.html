@@ -35,7 +35,7 @@
 				<div class="row align-items-center justify-content-between d-flex">
 					<div id="logo" style="    margin-left: 3%;">
 						<a href="#"><img src="img/nutripharma/logo_nutripharma.png" alt="" title=""
-										 style="    width: 140px;height: 100px;" /></a>
+										 style="    width: 140px;height: 85px;" /></a>
 					</div>
 					<nav id="nav-menu-container" style="margin-right: 3%;">
 						<ul class="nav-menu">
@@ -59,7 +59,7 @@
 
 				  <div class="row justify-content-between" style="color: black;">
 					  <div class="col-lg-4 col-md-4 home-about-left">
-						  <div style="width:40%; line-height: 1;     padding: 0 2% 2% 2%;">
+						  <div style="    width: 100%;line-height: 1;padding: 0 2% 2% 2%;height: 40%; display: grid;">
 							  <div id="map"></div>
 						  </div>
 
@@ -190,8 +190,7 @@
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="js/popper.min.js"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>			
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>			
-  			<script src="js/easing.min.js"></script>			
+  			<script src="js/easing.min.js"></script>
 			<script src="js/hoverIntent.js"></script>
 			<script src="js/superfish.min.js"></script>	
 			<script src="js/jquery.ajaxchimp.min.js"></script>
@@ -203,9 +202,9 @@
 			<script src="js/jquery.counterup.min.js"></script>
 			<script src="js/simple-skillbar.js"></script>							
 			<script src="js/owl.carousel.min.js"></script>							
-			<script src="js/mail-script.js"></script>	
+			<script src="js/mail-script.js"></script>
 			<script src="js/main.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjoJ0lPh6pB2kkKJYGxckWA0-kQX_Q_4w=initMap"
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLuuCLPfv-EMWsbVUr7iPJtaubpbzzLow&callback=initMap"
 				type="text/javascript"></script>
 
 		<script>
@@ -216,10 +215,11 @@
 				});
 			}
 
-			$(document).ready(function(e) {
-				initMap();
+			$(function(){
+				$(window).load(function(){
+					initMap();
+				});
 			});
-
 		</script>
 		</body>
 	</html>
