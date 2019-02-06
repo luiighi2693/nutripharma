@@ -57,13 +57,52 @@
 							  Contacto
 						  </span>
 
+				  <div class="contact-mobile-content" style="display: none;">
+					  <div class="row">
+						  <form style="    padding: 3%;">
+							  <div class="row mb-25">
+								  <div class="col">
+									  <input type="text" class="form-control" placeholder="NOMBRE Y APELLIDOS">
+								  </div>
+							  </div>
+
+							  <div class="row mb-25">
+								  <div class="col">
+									  <input type="text" class="form-control" placeholder="E-MAIL">
+								  </div>
+								  <div class="col">
+									  <input type="text" class="form-control" placeholder="CELULAR">
+								  </div>
+							  </div>
+
+							  <div class="row mb-25">
+								  <div class="col">
+									  <input type="text" class="form-control" placeholder="ASUNTO">
+								  </div>
+							  </div>
+
+							  <div class="row mb-25">
+								  <div class="col">
+									  <textarea class="form-control" placeholder="MENSAJE" rows="6"></textarea>
+								  </div>
+							  </div>
+						  </form>
+					  </div>
+
+					  <div class="row">
+						  <!--<div style="    width: 100%;line-height: 1;padding: 0 2% 2% 2%;height: 100%; display: grid;">-->
+						  <div id="map2" style="    width: 767px;height: 400px;"></div>
+						  <!--</div>-->
+					  </div>
+				  </div>
+
 				  <div class="row justify-content-between">
-					  <div class="col-lg-4 col-md-4 home-about-left">
+					  <div class="col-lg-6 col-md-6 col-sm-12 home-about-left">
 						  <div style="    width: 100%;line-height: 1;padding: 0 2% 2% 2%;height: 100%; display: grid;">
 							  <div id="map"></div>
 						  </div>
 					  </div>
-					  <div class="col-lg-8 col-md-8 home-about-left pt-30">
+					  <div class="col-lg-6 col-md-6 d-none d-md-block home-about-left pt-30">
 						  <form>
 							  <div class="row mb-25">
 								  <div class="col">
@@ -212,6 +251,11 @@
 		<script>
 			function initMap() {
 				map = new google.maps.Map(document.getElementById('map'), {
+					center: {lat: -34.397, lng: 150.644},
+					zoom: 8
+				});
+
+				map2 = new google.maps.Map(document.getElementById('map2'), {
 					center: {lat: -34.397, lng: 150.644},
 					zoom: 8
 				});
