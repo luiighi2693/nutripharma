@@ -254,13 +254,109 @@
 		<script>
 			function initMap() {
 				map = new google.maps.Map(document.getElementById('map'), {
-					center: {lat: -34.397, lng: 150.644},
-					zoom: 8
+					center: {lat: -12.0447267, lng: -77.0424607},
+					zoom: 6
 				});
 
 				map2 = new google.maps.Map(document.getElementById('map2'), {
-					center: {lat: -34.397, lng: 150.644},
-					zoom: 8
+					center: {lat: -12.0447267, lng: -77.0424607},
+					zoom: 6
+				});
+
+				var marker1 = new google.maps.Marker({
+					position: {lat: -12.0447267, lng: -77.0424607},
+					map: map,
+					title: 'Farmacia Universal'
+				});
+
+				var marker1Responsive = new google.maps.Marker({
+					position: {lat: -12.0447267, lng: -77.0424607},
+					map: map2,
+					title: 'Farmacia Universal'
+				});
+
+				var marker2 = new google.maps.Marker({
+					position: {lat: -12.0509234, lng: -77.0448124},
+					map: map,
+					title: 'OTIFARMA'
+				});
+
+				var marker2Responsive = new google.maps.Marker({
+					position: {lat: -12.0509234, lng: -77.0448124},
+					map: map2,
+					title: 'OTIFARMA'
+				});
+
+				var marker3 = new google.maps.Marker({
+					position: {lat: -12.0508757, lng: -77.0601333},
+					map: map,
+					title: 'FarmaMía'
+				});
+
+				var marker3Responsive = new google.maps.Marker({
+					position: {lat: -12.0508757, lng: -77.0601333},
+					map: map2,
+					title: 'FarmaMía'
+				});
+
+				var marker4 = new google.maps.Marker({
+					position: {lat: -8.0975827, lng: -79.0451398},
+					map: map,
+					title: 'Droguería Distribuidora Pacífico S.A.C'
+				});
+
+				var marker4Responsive = new google.maps.Marker({
+					position: {lat: -8.0975827, lng: -79.0451398},
+					map: map2,
+					title: 'Droguería Distribuidora Pacífico S.A.C'
+				});
+
+				var marker5 = new google.maps.Marker({
+					position: {lat: -13.5299334, lng: -71.9742685},
+					map: map,
+					title: 'Corsofar E.I.R.L.'
+				});
+
+				var marker5Responsive = new google.maps.Marker({
+					position: {lat: -13.5299334, lng: -71.9742685},
+					map: map2,
+					title: 'Corsofar E.I.R.L.'
+				});
+
+				var marker6 = new google.maps.Marker({
+					position: {lat: -12.0582941, lng: -75.2143407},
+					map: map,
+					title: 'Droguería Euro and America'
+				});
+
+				var marker6Responsive = new google.maps.Marker({
+					position: {lat: -12.0582941, lng: -75.2143407},
+					map: map2,
+					title: 'Droguería Euro and America'
+				});
+
+				var marker7 = new google.maps.Marker({
+					position: {lat: -8.3872158, lng: -74.5670077},
+					map: map,
+					title: 'Nutraceúticos Selva E.I.R.L.'
+				});
+
+				var marker7Responsive = new google.maps.Marker({
+					position: {lat: -8.3872158, lng: -74.5670077},
+					map: map2,
+					title: 'Nutraceúticos Selva E.I.R.L.'
+				});
+
+				var marker8 = new google.maps.Marker({
+					position: {lat: -16.3993278, lng: -71.5192988},
+					map: map,
+					title: 'NEGENAS E.I.R.L, Negocios Generales Astral'
+				});
+
+				var marker8Responsive = new google.maps.Marker({
+					position: {lat: -16.3993278, lng: -71.5192988},
+					map: map2,
+					title: 'NEGENAS E.I.R.L, Negocios Generales Astral'
 				});
 			}
 
