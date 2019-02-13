@@ -6,15 +6,15 @@
  * Time: 8:58 PM
  */
 
-$name = $_POST['name'];
-//$dni = $_POST['dni'];
-//$address = $_POST['address'];
-//$district = $_POST['district'];
-$email = $_POST['email'];
-$cellphone = $_POST['cellphone'];
-//$radio = $_POST['radio'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
+$name = $_POST['nameResponsive'];
+//$dni = $_POST['dniResponsive'];
+//$address = $_POST['addressResponsive'];
+//$district = $_POST['districtResponsive'];
+$email = $_POST['emailResponsive'];
+$cellphone = $_POST['cellphoneResponsive'];
+//$radio = $_POST['radioResponsive'];
+$subject = $_POST['subjectResponsive'];
+$message = $_POST['messageResponsive'];
 
 $headers = 'From: '.$email . "\r\n" .
     'Reply-To: ventas@nutripharma.com' . "\r\n" .

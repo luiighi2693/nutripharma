@@ -59,33 +59,34 @@
 
 				  <div class="contact-mobile-content" style="display: none;">
 					  <div class="row">
-						  <form style="    padding: 3%;">
+						  <form style="    padding: 3%;" id="myFormResponsive" method="post" action="mail2.php">
 							  <div class="row mb-25">
 								  <div class="col">
-									  <input type="text" class="form-control" placeholder="NOMBRE Y APELLIDOS">
+									  <input type="text" name="nameResponsive" id="nameResponsive" class="form-control" placeholder="NOMBRE Y APELLIDOS">
 								  </div>
 							  </div>
 
 							  <div class="row mb-25">
 								  <div class="col">
-									  <input type="text" class="form-control" placeholder="E-MAIL">
+									  <input type="text" name="emailResponsive" id="emailResponsive" class="form-control" placeholder="E-MAIL">
 								  </div>
 								  <div class="col">
-									  <input type="text" class="form-control" placeholder="CELULAR">
+									  <input type="text" name="cellphoneResponsive" id="cellphoneResponsive" class="form-control" placeholder="CELULAR">
 								  </div>
 							  </div>
 
 							  <div class="row mb-25">
 								  <div class="col">
-									  <input type="text" class="form-control" placeholder="ASUNTO">
+									  <input type="text" name="subjectResponsive" id="subjectResponsive" class="form-control" placeholder="ASUNTO">
 								  </div>
 							  </div>
 
 							  <div class="row mb-25">
 								  <div class="col">
-									  <textarea class="form-control" placeholder="MENSAJE" rows="6"></textarea>
+									  <textarea class="form-control" name="messageResponsive" id="messageResponsive" placeholder="MENSAJE" rows="6"></textarea>
 								  </div>
 							  </div>
+							  <button type="submit" onclick="sendObjectsResponsive()" class="btn btn-primary">Enviar</button>
 						  </form>
 					  </div>
 
@@ -103,33 +104,35 @@
 						  </div>
 					  </div>
 					  <div class="col-lg-6 col-md-6 d-none d-md-block home-about-left pt-30">
-						  <form>
+						  <form id="myForm" method="post" action="mail.php">
 							  <div class="row mb-25">
 								  <div class="col">
-									  <input type="text" class="form-control" placeholder="NOMBRE Y APELLIDOS">
+									  <input type="text" name="name" id="name" class="form-control" placeholder="NOMBRE Y APELLIDOS">
 								  </div>
 							  </div>
 
 							  <div class="row mb-25">
 								  <div class="col">
-									  <input type="text" class="form-control" placeholder="E-MAIL">
+									  <input type="text" name="email" id="email" class="form-control" placeholder="E-MAIL">
 								  </div>
 								  <div class="col">
-									  <input type="text" class="form-control" placeholder="CELULAR">
+									  <input type="text" name="cellphone" id="cellphone" class="form-control" placeholder="CELULAR">
 								  </div>
 							  </div>
 
 							  <div class="row mb-25">
 								  <div class="col">
-									  <input type="text" class="form-control" placeholder="ASUNTO">
+									  <input type="text" name="subject" id="subject" class="form-control" placeholder="ASUNTO">
 								  </div>
 							  </div>
 
 							  <div class="row mb-25">
 								  <div class="col">
-									  <textarea class="form-control" placeholder="MENSAJE" rows="6"></textarea>
+									  <textarea class="form-control" name="message" id="message" placeholder="MENSAJE" rows="6"></textarea>
 								  </div>
 							  </div>
+
+							  <button type="submit" onclick="sendObjects()" class="btn btn-primary">Enviar</button>
 						  </form>
 					  </div>
 				  </div>
@@ -266,6 +269,60 @@
 					initMap();
 				});
 			});
+
+			function sendObjects() {
+				if (validateForm()) {
+					alert('Correo Enviado');
+					document.getElementById('myForm').submit();
+				} else {
+					alert("existen campos obligatorios invalidos");
+				}
+			}
+
+			function validateForm() {
+				var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+				if (!re.test($('#email')[0].value)) {
+					return false;
+				}
+				if (($('#name')[0].value).length == 0) {
+					return false
+				}
+				if (($('#subject')[0].value).length == 0) {
+					return false
+				}
+				if (($('#cellphone')[0].value).length == 0) {
+					return false
+				}
+				return true;
+			}
+
+			function sendObjectsResponsive() {
+				if (validateFormResponsive()) {
+					alert('Correo Enviado');
+					document.getElementById('myFormResponsive').submit();
+				} else {
+					alert("existen campos obligatorios invalidos");
+				}
+			}
+
+			function validateFormResponsive() {
+				var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+				if (!re.test($('#emailResponsive')[0].value)) {
+					return false;
+				}
+				if (($('#nameResponsive')[0].value).length == 0) {
+					return false
+				}
+				if (($('#subjectResponsive')[0].value).length == 0) {
+					return false
+				}
+				if (($('#cellphoneResponsive')[0].value).length == 0) {
+					return false
+				}
+				return true;
+			}
 		</script>
 		</body>
 	</html>
